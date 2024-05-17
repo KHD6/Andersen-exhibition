@@ -3,11 +3,10 @@
 .inner{margin: 0 auto; width: calc(100% - 200px);}
 /*header 시작*/
 header{position: fixed; top: 0; left: 0; width: 100%; min-width: 50%; -webkit-box-shadow: 0 5px 8px 0 rgba(0,0,0,0.25); box-shadow: 0 5px 8px 0 rgba(0,0,0,0.25); z-index: 99; background-color: #fff;}
-header .inner{position: relative; height: 100px;}
-header h1{width: 255px; height: 57px; position: absolute; top: 50%; left: 0; transform: translateY(-50%);}
+header .inner{height: 100px; display: flex; justify-content: space-between; padding: 22px 0;}
+header h1{width: 255px; height: 57px; margin-right: 20px;}
 header a img{width: 100%;}
-header nav{position: absolute; top: 50%; right: 0; transform: translateY(-50%);}
-header nav ul{display: flex;}
+header nav ul{display: flex; padding-top: 10px;}
 header nav ul li{margin-right: 70px;}
 header nav ul li:last-child{margin-right: 0;}
 header nav ul li a{font-family: "Marcellus", serif; font-size: 30px;}
@@ -20,3 +19,109 @@ header nav ul li:hover::after{width: 100%;}
 #visual .visual-bg{width: 100%; height: 100%; background: url(../img/visual.jpg) no-repeat center / cover; position: relative;}
 #visual .visual-bg .scroll{position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%); color: #fff; font-size: 25px; padding-bottom: 170px; background: url(../img/scroll-arrow.png) no-repeat bottom / 35px auto; text-shadow: 0 0 8px #000; animation: scroll 3s infinite;}
 /*visual 끝*/
+
+/*profile 시작*/
+#profile{height: calc(100vh - 100px);}
+#profile .profile-bg{height: 100%; background: url(../img/signature.png) no-repeat 95% 95%; position: relative;}
+#profile h2{font-size: 250px; font-family: "Reenie Beanie", cursive; opacity: 10%; position: absolute; top: 130px; left: 100px; z-index: 3;}
+#profile .txt-box{position: absolute; top: 50%; left: 25%; transform: translate(-50%); text-align: center;}
+#profile .txt-box h3{font-family: "Marcellus", serif; font-size: 40px; margin-bottom: 65px;}
+#profile .txt-box p{font-size: 32px;}
+#profile .card{position: absolute; top: 0%; left: 50%; transform: translate(-50%);}
+
+/*profile 끝*/
+
+
+
+
+/*profile 초상화 애니메이션 시작*/
+:root {
+  --card-height: 900px;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+
+.card {
+  width: var(--card-width);
+  height: var(--card-height);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 36px;
+  perspective: 2500px;
+  margin: 0 50px;
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.wrapper {
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  border-radius: 50% 50% 0 0;
+}
+
+.card:hover .wrapper {
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+
+  
+}
+
+.wrapper::before,
+.wrapper::after {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+}
+
+.wrapper::after {
+  bottom: 0;
+  opacity: 1;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+
+.card:hover .wrapper::before,
+.wrapper::after {
+  opacity: 1;
+}
+
+.card:hover .wrapper::after {
+  height: 120px;
+}
+
+.character {
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: -1;
+}
+
+.card:hover .character {
+  opacity: 1;
+  transform: translate3d(0%, -20%, 1000px);
+}
+
+/*profile 초상화 애니메이션 끝*/
+
+
+
+
