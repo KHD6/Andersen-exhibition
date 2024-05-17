@@ -1,9 +1,19 @@
 @charset "utf-8";
 
+/*Visual 화살표 애니메이션 시작*/
 @keyframes scroll {
-  0%{transform: translate(-50% 0%);}
-  10%{transform: translate(-50% 0%);}
-  50%{transform: translate(-50% -20%);}
-  90%{transform: translate(-50% 0%);}
-  100%{transform: translate(-50% 0%);}
+  0%{transform: translate(-50%, 0%);}
+  10%{transform: translate(-50%, 0%);}
+  50%{transform: translate(-50%, -20%);}
+  90%{transform: translate(-50%, 0%);}
+  100%{transform: translate(-50%, 0%);}
 }
+/*Visual 화살표 애니메이션 끝*/
+
+
+/*fairytale-slide 텍스트 애니메이션 시작*/
+@keyframes SlideTxtUp {
+  0%{transform: translateY(50%); opacity: 0;}
+  100%{transform: translateY(0); opacity: 1;}
+}
+/*fairytale-slide 텍스트 애니메이션 끝*/

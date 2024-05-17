@@ -1,33 +1,44 @@
 @charset "utf-8";
 
-.inner{margin: 0 auto; width: calc(100% - 200px);}
+.inner{margin: 0 auto; width: 340px; padding: 0 30px;}
+
 /*header 시작*/
-header{position: fixed; top: 0; left: 0; width: 100%; min-width: 50%; -webkit-box-shadow: 0 5px 8px 0 rgba(0,0,0,0.25); box-shadow: 0 5px 8px 0 rgba(0,0,0,0.25); z-index: 99; background-color: #fff;}
+header{width: 100%;-webkit-box-shadow: 0 5px 8px 0 rgba(0,0,0,0.25); box-shadow: 0 5px 8px 0 rgba(0,0,0,0.25); z-index: 99; background-color: #fff;}
 header .inner{height: 100px; display: flex; justify-content: space-between; padding: 22px 0;}
-header h1{width: 255px; height: 57px; margin-right: 20px;}
+header h1{width: 255px; height: 57px; margin-right: 10px; margin: 0 auto;}
 header a img{width: 100%;}
-header nav ul{display: flex; padding-top: 10px;}
-header nav ul li{margin-right: 70px;}
-header nav ul li:last-child{margin-right: 0;}
-header nav ul li a{font-family: "Marcellus", serif; font-size: 30px;}
-header nav ul li::after{content: ""; display: block; width: 0%; height: 3px; background-color: #000; transition: all 0.5s;}
-header nav ul li:hover::after{width: 100%;}
+header nav{display: none}
 /*header 끝*/ 
 
 /*visual 시작*/
-#visual{height: 100vh;}
+#visual{height: calc(100vh - 100px);}
 #visual .visual-bg{width: 100%; height: 100%; background: url(../img/visual.jpg) no-repeat center / cover; position: relative;}
-#visual .visual-bg .scroll{position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%); color: #fff; font-size: 25px; padding-bottom: 170px; background: url(../img/scroll-arrow.png) no-repeat bottom / 35px auto; text-shadow: 0 0 8px #000; animation: scroll 3s infinite;}
+#visual .visual-bg .scroll{position: absolute; bottom: 60px; left: 50%; color: #fff; font-size: 25px; padding-bottom: 170px; background: url(../img/scroll-arrow.png) no-repeat bottom / 35px auto; text-shadow: 0 0 8px #000; animation: scroll 2s infinite alternate;}
 /*visual 끝*/
 
 /*profile 시작*/
-#profile{height: calc(100vh - 100px);}
-#profile .profile-bg{height: 100%; background: url(../img/signature.png) no-repeat 95% 95%; position: relative;}
-#profile h2{font-size: 250px; font-family: "Reenie Beanie", cursive; opacity: 10%; position: absolute; top: 130px; left: 100px; z-index: 3;}
-#profile .txt-box{position: absolute; top: 50%; left: 25%; transform: translate(-50%); text-align: center;}
-#profile .txt-box h3{font-family: "Marcellus", serif; font-size: 40px; margin-bottom: 65px;}
-#profile .txt-box p{font-size: 32px;}
-#profile .card{position: absolute; top: 0%; left: 50%; transform: translate(-50%);}
+#profile{position: relative; padding: 20px 0;}
+#profile h2{font-size: 100px; font-family: "Reenie Beanie", cursive; opacity: 10%; text-align: center; font-weight: 100;}
+
+#profile .card{margin: 0 auto; margin-bottom: 35px;}
+
+#profile .txt-box{text-align: center;}
+
+#profile .txt-box h3{font-family: "Marcellus", serif; font-size: 28px;}
+#profile .txt-box p{font-size: 20px; margin-bottom: 15px;}
+#profile .year{font-family: "Marcellus", serif; font-size: 20px; text-align: center; margin-bottom: 30px;}
+
+#profile .fairytale-slide{width: 200px; height: 126px;}
+#profile .fairytale-slide ul li{background-color: #fff; text-align: center;}
+#profile .fairytale-slide ul li h4{font-size: 30px; font-weight: bold; margin-bottom: 15px;}
+#profile .fairytale-slide ul li p span{font-size: 16px; opacity: 0; display: inline-block;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(1){animation: SlideTxtUp 1s 0.25s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(2){animation: SlideTxtUp 1s 0.5s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(3){animation: SlideTxtUp 1s 0.75s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(4){animation: SlideTxtUp 1s 1s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(5){animation: SlideTxtUp 1s 1.25s backwards; opacity: 1;}
+
+#profile .signature{width: 325px; height: 104px; background: url(../img/signature.png) no-repeat center / cover; margin: 0 auto;}
 
 /*profile 끝*/
 
@@ -36,7 +47,7 @@ header nav ul li:hover::after{width: 100%;}
 
 /*profile 초상화 애니메이션 시작*/
 :root {
-  --card-height: 900px;
+  --card-height: 432px;
   --card-width: calc(var(--card-height) / 1.5);
 }
 
@@ -59,7 +70,7 @@ header nav ul li:hover::after{width: 100%;}
   
 }
 
-.wrapper {
+.c-wrapper {
   transition: all 0.5s;
   position: absolute;
   width: 100%;
@@ -67,7 +78,7 @@ header nav ul li:hover::after{width: 100%;}
   border-radius: 50% 50% 0 0;
 }
 
-.card:hover .wrapper {
+.card:hover .c-wrapper {
   transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
   box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
@@ -76,8 +87,8 @@ header nav ul li:hover::after{width: 100%;}
   
 }
 
-.wrapper::before,
-.wrapper::after {
+.c-wrapper::before,
+.c-wrapper::after {
   content: "";
   opacity: 0;
   width: 100%;
@@ -87,7 +98,7 @@ header nav ul li:hover::after{width: 100%;}
   left: 0;
 }
 
-.wrapper::after {
+.c-wrapper::after {
   bottom: 0;
   opacity: 1;
   background-image: linear-gradient(
@@ -98,12 +109,12 @@ header nav ul li:hover::after{width: 100%;}
   );
 }
 
-.card:hover .wrapper::before,
-.wrapper::after {
+.card:hover .c-wrapper::before,
+.c-wrapper::after {
   opacity: 1;
 }
 
-.card:hover .wrapper::after {
+.card:hover .c-wrapper::after {
   height: 120px;
 }
 
@@ -118,6 +129,7 @@ header nav ul li:hover::after{width: 100%;}
 .card:hover .character {
   opacity: 1;
   transform: translate3d(0%, -20%, 1000px);
+  z-index: 5;
 }
 
 /*profile 초상화 애니메이션 끝*/
@@ -125,3 +137,64 @@ header nav ul li:hover::after{width: 100%;}
 
 
 
+
+
+
+
+
+
+
+/*1024px ~ 1920px 시작*/
+@media screen and (min-width : 1024px) {
+  .inner{margin: 0 auto; min-width: 1024px; width: calc(100% - 80px); padding: 0;}
+
+
+  /*header 시작*/
+  header{position: fixed; top: 0; left: 0; width: 100%;}
+  header h1{margin: 0;}
+  header nav{display: block;}
+  header nav ul{display: flex; padding-top: 10px;}
+  header nav ul li{margin-right: 50px;}
+  header nav ul li:last-child{margin-right: 0;}
+  header nav ul li a{font-family: "Marcellus", serif; font-size: 30px;}
+  header nav ul li::after{content: ""; display: block; width: 0%; height: 3px; background-color: #000; transition: all 0.5s;}
+  header nav ul li:hover::after{width: 100%;}
+  /*header 끝*/ 
+
+
+  /*profile 시작*/
+
+  #profile h2{font-size: 200px;text-align: left; font-weight: 200;}
+  
+  
+  #profile .card{margin: 0 auto; margin-bottom: 35px;}
+  
+  #profile .txt-box{text-align: center;}
+  #profile .txt-box h3{font-size: 40px;}
+  #profile .txt-box p{font-size: 32px; margin-bottom: 22px;}
+  
+  #profile .year{font-size: 32px; margin-bottom: 35px;}
+  
+  #profile .fairytale-slide{width: 225px; height: 140px;}
+  #profile .fairytale-slide ul li h4{font-size: 35px;}
+  #profile .fairytale-slide ul li p span{font-size: 18px;}
+  #profile .signature{width: 453px; height: 145px; text-align: right; margin: 0 0 0 auto;}
+  /*profile 끝*/ 
+
+  /*profile 초상화 애니메이션 시작*/
+:root {--card-height: 624px;}
+  /*profile 초상화 애니메이션 끝*/
+/*1024px ~ 1920px 끝*/
+
+
+
+
+
+
+/*1024px ~ 1920px 시작*/
+@media screen and (min-width : 1920px) {
+
+
+
+}
+/*1024px ~ 1920px 끝*/

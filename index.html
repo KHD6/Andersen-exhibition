@@ -10,12 +10,16 @@
 
   <!--CSS 시작-->
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="css/ani.css">
+  <link rel="stylesheet" href="css/main.css">
   <!--CSS 끝-->
 
   <!--JS 시작-->
   <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/wallop/2.4.1/js/Wallop.min.js'></script>
   <script src="js/main.js"></script>
   <!--JS 끝-->
 
@@ -48,26 +52,68 @@
 
       <!--.profile 시작-->
       <section id="profile">
-        <div class="profile-bg">
+        <div class="inner">
           <h2>ANDERSEN</h2>
-          <div class="txt-box">
-            <h3>Hans Christian Andersen</h3>
-            <p>덴마크의 동화작가이자 소설가</p>
-          </div><!--.txt-box-->
-          
+
           <div class="card">
-            <div class="wrapper">
-              <img src="img/andersen.jpg" class="cover-image" />
-            </div><!--.wrapper-->
+             <div class="c-wrapper">
+               <img src="img/andersen.jpg" class="cover-image" />
+             </div><!--.wrapper-->
             <img src="img/andersen.png" class="character" />
           </div><!--.card-->
-
-          <div class="year">
+  
+          <div class="txt-box">
+              <h3>Hans Christian Andersen</h3>
+              <p>덴마크의 동화작가이자 소설가</p>
+          </div><!--.txt-box-->
             
+          <div class="year">
+              <P>1805. 04. 02. ~ 1875. 08. 04</P>
           </div><!--.year-->
-        </div><!--.profile-bg-->
+  
+          <div class="swiper fairytale-slide">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <h4>성냥팔이 소녀</h4>
+                  <p>
+                    <span>Den</span>
+                    <span>Lille</span>
+                    <span>Pige</span>
+                    <span>med</span>
+                    <span>Svovlstikkerne</span>
+                  </p>
+                </li>
+                <li class="swiper-slide">
+                  <h4>인어공주</h4>
+                  <p>
+                    <span>Den</span>
+                    <span>lille</span>
+                    <span>havfrue</span>
+                  </p>
+                </li>
+                <li class="swiper-slide">
+                  <h4>빨간 구두</h4>
+                  <p>
+                    <span>De</span>
+                    <span>rode</span>
+                    <span>sko</span>
+                  </p>
+                </li>
+                <li class="swiper-slide">
+                  <h4>눈의 여왕</h4>
+                  <p><span>Snedronningen</span>
+                  </p>
+                </li>
+              </ul> 
+           </div>
+
+          <div class="signature"></div>
+        </div><!--.inner-->
       </section><!--.profile-->
       <!--.profile 끝-->
+
+
+
 
     </section><!--#contents-->
   </div><!--.wrap-->
