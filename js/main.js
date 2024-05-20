@@ -24,7 +24,7 @@ $(document).ready(function(){
     const pictures = document.querySelectorAll('.Picture');
     var previousTouch = undefined;
 
-  function updateElementPosition(element, event) {
+    function updateElementPosition(element, event) {
      var movementX, movementY;
 
      if (event.type === 'touchmove') {
@@ -74,4 +74,28 @@ $(document).ready(function(){
       picture.addEventListener("touchstart", startFunction);
     }
   );
+
+    /*famous 끝*/
+
+    /*story-wrap.on 시작*/
+    $("#story .story01 .book-box").click(function(){
+      $("#story .story01 .story-wrap").addClass("on")
+    });
+    $("#story .story02 .book-box").click(function(){
+      $("#story .story02 .story-wrap").addClass("on")
+    });
+    $("#story .story03 .book-box").click(function(){
+      $("#story .story03 .story-wrap").addClass("on")
+    });
+    $("#story .story04 .book-box").click(function(){
+      $("#story .story04 .story-wrap").addClass("on")
+    });
+    $(".story-wrap").click(function(){
+      $(".story-wrap").removeClass("on")
+    });
+    /*story-wrap.on 끝*/
+
+
+
+
 });
