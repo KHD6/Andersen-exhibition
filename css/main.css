@@ -18,7 +18,9 @@ header nav{display: none}
 
 /*profile 시작*/
 #profile{position: relative; padding: 20px 0;}
-#profile h2{font-size: 100px; font-family: "Reenie Beanie", cursive; opacity: 10%; text-align: center; font-weight: 100;}
+#profile h2{font-size: 100px; font-family: "Reenie Beanie", cursive; opacity: 10%; text-align: center; font-weight: 100; transition: all 0.3s;}
+
+
 
 #profile .card{margin: 0 auto; margin-bottom: 35px;}
 
@@ -32,15 +34,56 @@ header nav{display: none}
 #profile .fairytale-slide ul li{background-color: #fff; text-align: center;}
 #profile .fairytale-slide ul li h4{font-size: 30px; font-weight: bold; margin-bottom: 15px;}
 #profile .fairytale-slide ul li p span{font-size: 16px; opacity: 0; display: inline-block;}
-#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(1){animation: SlideTxtUp 1s 0.25s backwards; opacity: 1;}
-#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(2){animation: SlideTxtUp 1s 0.5s backwards; opacity: 1;}
-#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(3){animation: SlideTxtUp 1s 0.75s backwards; opacity: 1;}
-#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(4){animation: SlideTxtUp 1s 1s backwards; opacity: 1;}
-#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(5){animation: SlideTxtUp 1s 1.25s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(1){animation: SlideTxtUp 1s 0.1s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(2){animation: SlideTxtUp 1s 0.2s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(3){animation: SlideTxtUp 1s 0.3s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(4){animation: SlideTxtUp 1s 0.4s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(5){animation: SlideTxtUp 1s 0.5s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(6){animation: SlideTxtUp 1s 0.6s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(7){animation: SlideTxtUp 1s 0.7s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(8){animation: SlideTxtUp 1s 0.8s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(9){animation: SlideTxtUp 1s 0.9s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(10){animation: SlideTxtUp 1s 1.0s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(11){animation: SlideTxtUp 1s 1.1s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(12){animation: SlideTxtUp 1s 1.2s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(13){animation: SlideTxtUp 1s 1.3s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(14){animation: SlideTxtUp 1s 1.4s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(15){animation: SlideTxtUp 1s 1.5s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(16){animation: SlideTxtUp 1s 1.6s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(17){animation: SlideTxtUp 1s 1.7s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(18){animation: SlideTxtUp 1s 1.8s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(19){animation: SlideTxtUp 1s 1.9s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(20){animation: SlideTxtUp 1s 2.0s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(21){animation: SlideTxtUp 1s 2.1s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(22){animation: SlideTxtUp 1s 2.2s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(23){animation: SlideTxtUp 1s 2.3s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(24){animation: SlideTxtUp 1s 2.4s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(25){animation: SlideTxtUp 1s 2.5s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(26){animation: SlideTxtUp 1s 2.6s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(27){animation: SlideTxtUp 1s 2.7s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(28){animation: SlideTxtUp 1s 2.8s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(29){animation: SlideTxtUp 1s 2.9s backwards; opacity: 1;}
+#profile .fairytale-slide ul li.swiper-slide-active p span:nth-child(30){animation: SlideTxtUp 1s 3.0s backwards; opacity: 1;}
+
 
 #profile .signature{width: 325px; height: 104px; background: url(../img/signature.png) no-repeat center / cover; margin: 0 auto;}
 
 /*profile 끝*/
+
+/*famous 시작*/
+
+#famous{height: 100vh;}
+#famous .inner{position: relative; height: calc(100vh - 100px);}
+#famous .famous-box{text-align: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%;}
+#famous h2{font-size: 40px; font-weight: bold; margin-bottom: 30px;}
+#famous h2 span{display: block; margin-bottom: 20px;}
+#famous h2 span:last-child{margin-bottom: 0;}
+#famous p{font-size: 25px; margin-bottom: 20px;}
+#famous .signature{width: 225px; height: 72px; background: url(../img/signature.png) no-repeat center / cover; margin: 0 auto;}
+#famous .Container{z-index: 5;}
+#famous .Container .Picture .Picture-note{font-size: 16px; margin: 0 auto;}
+
+/*famous 끝*/
 
 
 
@@ -59,7 +102,7 @@ header nav{display: none}
   justify-content: center;
   align-items: flex-end;
   padding: 0 36px;
-  perspective: 2500px;
+  perspective: 2500px; 
   margin: 0 50px;
 }
 
@@ -118,6 +161,18 @@ header nav{display: none}
   height: 120px;
 }
 
+.title {
+  width: 100%;
+  transition: all 0.5s;
+  z-index: 10;
+  opacity: 0;
+}
+
+.card:hover .title {
+  transform: translate3d(0%, -100px,700px);
+  opacity: 1;
+}
+
 .character {
   width: 100%;
   opacity: 0;
@@ -133,6 +188,63 @@ header nav{display: none}
 }
 
 /*profile 초상화 애니메이션 끝*/
+
+
+
+/*famous 이미지 효과 시작*/
+
+.Container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.Picture {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 5px solid #fff;
+  border-radius: 3px;
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transform: translate(-50%, -50%);
+  user-select: none;
+  cursor: pointer;
+}
+
+.Picture-img {
+  display: block;
+  width: 210px;
+  height: 280px;
+  pointer-events: none;
+}
+
+.Picture-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 210px;
+  height: 50px;
+  padding: 12px 24px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.Network {
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.Network img {
+  width: 1.5rem;
+  aspect-ratio: 1 / 1;
+  vertical-align: middle;
+}
+
+/*famous 이미지 효과 끝*/
+
 
 
 
@@ -170,7 +282,7 @@ header nav{display: none}
   #profile .card{margin: 0 auto; margin-bottom: 35px;}
   
   #profile .txt-box{text-align: center;}
-  #profile .txt-box h3{font-size: 40px;}
+  #profile .txt-box h3{font-size: 40px; margin-bottom: 15px;}
   #profile .txt-box p{font-size: 32px; margin-bottom: 22px;}
   
   #profile .year{font-size: 32px; margin-bottom: 35px;}
@@ -182,8 +294,29 @@ header nav{display: none}
   /*profile 끝*/ 
 
   /*profile 초상화 애니메이션 시작*/
-:root {--card-height: 624px;}
+ :root {--card-height: 624px;}
   /*profile 초상화 애니메이션 끝*/
+
+  /*famous 시작*/
+  #famous h2{font-size: 70px; margin-bottom: 50px;}
+  #famous h2 span{margin-bottom: 25px;}
+  #famous p{font-size: 35px; margin-bottom: 30px;}
+  #famous .signature{width: 405px; height: 130px;}
+  #famous .Container .Picture .Picture-note{font-size: 18px;}
+  /*famous 끝*/
+
+  /*famous 카드효과 시작*/
+  .Picture-img {
+    width: 255px;
+    height: 340px;
+  }
+  
+  .Picture-note {
+    width: 225px;
+    height: 60px;
+  }
+  /*famous 카드효과 시작*/
+}
 /*1024px ~ 1920px 끝*/
 
 
@@ -194,7 +327,37 @@ header nav{display: none}
 /*1024px ~ 1920px 시작*/
 @media screen and (min-width : 1920px) {
 
+  /*profile 시작*/
+  #profile .inner{position: relative; height: calc(100vh - 100px);}
+  #profile h2{font-size: 250px; position: absolute; top: 0; left: 0; z-index: 9;}
+  #profile h2.on{opacity: 0;}
+  #profile .card{position: absolute; top: 0; left: 50%; transform: translateX(-50%);}
+  #profile .txt-box h3{margin-bottom: 65px; position: absolute; top: 35%; left: 25%; transform: translateX(-50%);}
+  #profile .txt-box p{position: absolute; top: 55%; left: 25%; transform: translateX(-50%);}
 
+  #profile .year{position: absolute; top: 35%; left: 75%; transform: translateX(-50%);}
+  #profile .fairytale-slide{position: absolute; top: 50%; left: 75%; transform: translateX(-50%);}
+  
+
+  #profile .signature{width: 733px; height: 235px; position: absolute; bottom: 0; right: 0;}
+  /*profile 끝*/ 
+
+
+  /*famous 시작*/
+  #famous .Container .Picture .Picture-note{font-size: 21px;}
+  /*famous 끝*/
+
+  /*famous 카드효과 시작*/
+ .Picture-img {
+   width: 300px;
+   height: 400px;
+  }
+    
+  .Picture-note {
+   width: 300px;
+    height: 70px;
+  }
+  /*famous 카드효과 시작*/
 
 }
 /*1024px ~ 1920px 끝*/
