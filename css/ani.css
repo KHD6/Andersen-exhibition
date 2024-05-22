@@ -208,15 +208,73 @@
 
 
 /*story-wrap .color-bg 이펙트 시작*/
+@keyframes bookmoving {
+  0%{transform: translate(-50%, 0px);}
+  50%{transform: translate(-50%, -20px);}
+  100%{transform: translate(-50%, 0px);}
+}
+@keyframes mbookmoving {/*10% = 1s*/
+  0%{transform: translate(-50%, 20px); bottom: 0px; opacity: 0;}
+  10%{transform: translate(-50%, 0px); bottom: 0px; opacity: 1;}
+  40%{transform: translate(-50%, 0px); bottom: 0px; opacity: 1;}
+  50%{transform: translate(-50%, 0px); bottom: -250px; opacity: 1;}
+  100%{transform: translate(-50%, 0px); bottom: -250px; opacity: 0;}
+}
+@keyframes mcaramoving {/*10% = 1s*/
+  0%{transform: translate(-50%, 20px); bottom: 50px; opacity: 0;}
+  10%{transform: translate(-50%, 0px); bottom: 50px; opacity: 1;}
+  35%{transform: translate(-50%, 0px); bottom: 50px; opacity: 1;}
+  45%{transform: translate(-50%, 0px); bottom: -200px; opacity: 1;}
+  100%{transform: translate(-50%, 0px); bottom: -200px; opacity: 0;}
+}
+@keyframes padbookmoving {/*10% = 1s*/
+  0%{transform: translate(-50%, 20px); bottom: 0px; opacity: 0;}
+  10%{transform: translate(-50%, 0px); bottom: 0px; opacity: 1;}
+  40%{transform: translate(-50%, 0px); bottom: 0px; opacity: 1;}
+  50%{transform: translate(-50%, 0px); bottom: -250px; opacity: 1;}
+  100%{transform: translate(-50%, 0px); bottom: -250px; opacity: 0;}
+}
+@keyframes padcaramoving {/*10% = 1s*/
+  0%{transform: translate(-50%, 20px); bottom: 70px; opacity: 0;}
+  10%{transform: translate(-50%, 0px); bottom: 70px; opacity: 1;}
+  35%{transform: translate(-50%, 0px); bottom: 70px; opacity: 1;}
+  45%{transform: translate(-50%, 0px); bottom: -180px; opacity: 1;}
+  100%{transform: translate(-50%, 0px); bottom: -180px; opacity: 0;}
+}
+@keyframes pcbookmoving {/*10% = 1s*/
+  0%{transform: translate(-50%, 20px); bottom: -50px; opacity: 0;}
+  10%{transform: translate(-50%, 0px); bottom: -30px; opacity: 1;}
+  50%{transform: translate(-50%, 0px); bottom: -30px; opacity: 1;}
+  80%{transform: translate(-50%, 0px); bottom: -30px; opacity: 1;}
+  100%{transform: translate(-50%, 0px); bottom: -30px; opacity: 1;}
+}
+@keyframes pccaramoving {/*10% = 1s*/
+  0%{transform: translate(-50%, 20px); bottom: 60px; opacity: 0;}
+  10%{transform: translate(-50%, 0px); bottom: 60px; opacity: 1;}
+  40%{transform: translate(-50%, 0px); bottom: 60px; opacity: 1;}
+  70%{transform: translate(-50%, 0px); bottom: 60px; opacity: 1;}
+  100%{transform: translate(-50%, 0px); bottom: 60px; opacity: 1;}
+}
 @keyframes colorbg {
   0%{transform: scale(0); border-radius: 50% 50% 0 0;}
   50%{transform: scale(1); border-radius: 50% 50% 0 0;}
   100%{transform: scale(1); border-radius: 0%;}
 }
-@keyframes wcolorbg {
-  0%{transform: scale(0); border-radius: 50% 50% 0 0;}
-  50%{transform: scale(1); border-radius: 50% 50% 0 0;}
-  100%{transform: scale(1); border-radius: 0%;}
+@keyframes txtbgcolor {
+  0%{background-color: transparent;}
+  100%{background-color: auto;}
+}
+@keyframes txtcolor {
+  0%{color: #fff;}
+  100%{color: #000;}
+}
+@keyframes txtspancolor {
+  0%{color: #fff500;}
+  100%{color: #fff;}
+}
+@keyframes txtmotion {
+  0%{transform: translateY(20px); opacity: 0;}
+  100%{transform: translateY(0px); opacity: 1;}
 }
 
 /*story-wrap .color-bg 이펙트 끝*/

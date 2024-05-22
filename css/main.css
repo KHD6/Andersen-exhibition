@@ -67,7 +67,7 @@ header nav{display: none}
 #story ul li .book-box{width: 250px; height: 280px; position: relative; margin: 0 auto;}
 #story ul li .book-box::before{content: ""; display: block; width: 200px; height: 260px; border-radius: 100px 100px 0 0; position: absolute; top: 0; left: 50%; transform: translateX(-50%);}
 #story ul li .book-box::after{content: ""; display: block; width: 250px; height: 80px; position: absolute; bottom: 0; left: 50%; transform: translate(-50%) scale(1); transition: all 0.5s;}
-#story ul li .book-box:hover::after{transform: translate(-50%, -20px) scale(1.1);}
+#story ul li .book-box:hover::after{transform: translate(-50%, -20px); animation: bookmoving 3s infinite;}
 #story ul li:nth-child(1) .book-box::before{background-color: #eb5507;}
 #story ul li:nth-child(2) .book-box::before{background-color: #0e5bf1;}
 #story ul li:nth-child(3) .book-box::before{background-color: #e80d46;}
@@ -77,19 +77,46 @@ header nav{display: none}
 #story ul li:nth-child(3) .book-box::after{background: url(../img/book03.png) no-repeat center / cover;}
 #story ul li:nth-child(4) .book-box::after{background: url(../img/book04.png) no-repeat center / cover;}
 
+
 #story ul li .story-wrap{width: 100%; height: 100%; position: fixed; top: 0; left: 0; background-color: #fff; z-index: 99; display: none;}
+#story ul li .story-wrap .story-pc{display: none;}
 #story ul li .story-wrap.on{display: block;}
-#story ul li .story-wrap .color-bg{position: absolute; top: 0; left: 0; width: 100%; height: 100%; animation: colorbg 1s; transform: scale(1); z-index: -2; transform-origin: bottom center;}
-#story ul li .story-wrap .color-bg:after{content: ""; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; animation: wcolorbg 1s 1s backwards; transform: scale(1); z-index: -1; transform-origin: bottom center; background-color: #fff;}
-#story ul li:nth-child(1) .story-wrap .color-bg{background-color: #eb5507;}
-#story ul li:nth-child(2) .story-wrap .color-bg{background-color: #0e5bf1;}
-#story ul li:nth-child(3) .story-wrap .color-bg{background-color: #e80d46;}
-#story ul li:nth-child(4) .story-wrap .color-bg{background-color: #13d9f3;}
+#story ul li .story-wrap .color-bg{position: absolute; top: -20%; left: -20%; width: 140%; height: 140%; animation: colorbg 1s; transform: scale(1); z-index: -2; transform-origin: bottom center;}
+#story ul li .story-wrap .color-bg::before{content: ""; display: block; position: absolute; top: 0; left: -20%; width: 140%; height: 140%; animation: colorbg 1s 0.1s backwards; transform: scale(1); z-index: -1; transform-origin: bottom center; background-color: #fff;}
+#story ul li .story-wrap .color-bg:after{content: ""; display: block; position: absolute; top: 0; left: -20%; width: 140%; height: 140%; animation: colorbg 1s 0.2s backwards; transform: scale(1); z-index: -1; transform-origin: bottom center; background-color: #eb5507;}
+#story ul li:nth-child(1) .story-wrap .color-bg,
+#story ul li:nth-child(1) .story-wrap .color-bg:after{background-color: #eb5507;}
+#story ul li:nth-child(2) .story-wrap .color-bg,
+#story ul li:nth-child(2) .story-wrap .color-bg:after{background-color: #0e5bf1;}
+#story ul li:nth-child(3) .story-wrap .color-bg,
+#story ul li:nth-child(3) .story-wrap .color-bg:after{background-color: #e80d46;}
+#story ul li:nth-child(4) .story-wrap .color-bg,
+#story ul li:nth-child(4) .story-wrap .color-bg:after{background-color: #13d9f3;}
+#story ul li .story-wrap .wcolor-bg{position: absolute; top: -20%; left: -20%; width: 140%; height: 140%; animation: colorbg 1s 4.5s backwards; transform: scale(1); z-index: -2; transform-origin: bottom center; background-color: #fff;}
 
+#story ul li .story-wrap .txt-box{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%;}
+#story ul li .story-wrap .txt-box p{font-size: 22px; text-align: center; margin-bottom: 20px; line-height: 1.7;}
+#story ul li .story-wrap .txt-box p:nth-child(1){animation: txtcolor 0.5s 4.5s backwards, txtmotion 2s 1.5s backwards;}
+#story ul li .story-wrap .txt-box p:nth-child(2){animation: txtcolor 0.5s 4.5s backwards, txtmotion 2s 2.5s backwards;}
+#story ul li .story-wrap .txt-box p:nth-child(3){animation: txtcolor 0.5s 4.5s backwards, txtmotion 2s 3.5s backwards;}
+#story ul li .story-wrap .txt-box p strong{font-size: 28px; font-weight: bold;}
+#story ul li .story-wrap .txt-box p span{animation: txtbgcolor 0.1s 1.5s backwards, txtspancolor 0.5s 4.5s backwards;}
 
+#story ul li:nth-child(1) .story-wrap .txt-box p span{background-color: #eb5507; color: #fff; font-weight: bold;}
+#story ul li:nth-child(2) .story-wrap .txt-box p span{background-color: #0e5bf1; color: #fff; font-weight: bold;}
+#story ul li:nth-child(3) .story-wrap .txt-box p span{background-color: #e80d46; color: #fff; font-weight: bold;}
+#story ul li:nth-child(4) .story-wrap .txt-box p span{background-color: #13d9f3; color: #fff; font-weight: bold;}
 
-
-
+#story ul li .story-wrap .object-box .book{width: 351px; height: 109px; background-repeat: no-repeat; background-position: center; position: absolute; bottom: -200px; left: 50%; transform: translate(-50%, 0); animation: mbookmoving 10s 0.5s backwards; opacity: 0;}
+#story ul li:nth-child(1) .story-wrap .object-box .book{background-image: url(../img/book01.png);}
+#story ul li:nth-child(2) .story-wrap .object-box .book{background-image: url(../img/book02.png);}
+#story ul li:nth-child(3) .story-wrap .object-box .book{background-image: url(../img/book03.png);}
+#story ul li:nth-child(4) .story-wrap .object-box .book{background-image: url(../img/book04.png);}
+#story ul li .story-wrap .object-box .chara{width: 80px; height: 115px; background-repeat: no-repeat; background-position: center; background-size: cover; position: absolute; bottom: -150px; left: 50%; transform: translate(-50%, 0); animation: mcaramoving 10s 1s backwards; opacity: 0;}
+#story ul li:nth-child(1) .story-wrap .object-box .chara{background-image: url(../img/Character-The_Match_Girl.png);}
+#story ul li:nth-child(2) .story-wrap .object-box .chara{background-image: url(../img/Character-The_Little_Mermaid.png);}
+#story ul li:nth-child(3) .story-wrap .object-box .chara{background-image: url(../img/Character-The_Red_Shoes.png);}
+#story ul li:nth-child(4) .story-wrap .object-box .chara{background-image: url(../img/Character-The_Snow_Queen.png);}
 
 
 /*story 끝*/
@@ -177,11 +204,38 @@ header nav{display: none}
   #story ul li > .txt-box{width: 500px; height: 135px; border-radius: 70px; background-color: #ffe4d6; padding: 24px 0;}
 
   #story ul li > .txt-box p span{font-size: 28px;}
-  
 
+  #story ul li .story-wrap .story-mobile{display: none;}
+  #story ul li .story-wrap .story-pc{display: block;}
+  #story ul li .story-wrap .txt-box p{font-size: 25px; margin-bottom: 10px;}
+  #story ul li .story-wrap .txt-box p:nth-child(1){animation: txtcolor 0.5s 4.5s backwards, txtmotion 2s 1.5s backwards;}
+  #story ul li .story-wrap .txt-box p:nth-child(2){animation: txtcolor 0.5s 4.5s backwards, txtmotion 2s 1.75s backwards;}
+  #story ul li .story-wrap .txt-box p:nth-child(3){animation: txtcolor 0.5s 4.5s backwards, txtmotion 2s 2.0s backwards;}
+  #story ul li .story-wrap .txt-box p:nth-child(4){animation: txtcolor 0.5s 4.5s backwards, txtmotion 2s 2.25s backwards;}
+  #story ul li .story-wrap .txt-box p:nth-child(5){animation: txtcolor 0.5s 4.5s backwards, txtmotion 2s 2.5s backwards;}
+  #story ul li .story-wrap .txt-box p:nth-child(6){animation: txtcolor 0.5s 4.5s backwards, txtmotion 2s 2.75s backwards;}
+  #story ul li .story-wrap .txt-box p:nth-child(7){animation: txtcolor 0.5s 4.5s backwards, txtmotion 2s 3.0s backwards;}
+  #story ul li .story-wrap .txt-box p:nth-child(8){animation: txtcolor 0.5s 4.5s backwards, txtmotion 2s 3.25s backwards;}
+  #story ul li .story-wrap .txt-box p:nth-child(9){animation: txtcolor 0.5s 4.5s backwards, txtmotion 2s 3.5s backwards;}
+  #story ul li .story-wrap .txt-box p:nth-child(10){animation: txtcolor 0.5s 4.5s backwards, txtmotion 2s 3.75s backwards;}
+  #story ul li .story-wrap .txt-box p strong{font-size: 30px;}
+  #story ul li .story-wrap .object-box .book{width: 421px; height: 130px; animation: padbookmoving 10s 0.5s backwards;}
+  #story ul li .story-wrap .object-box .chara{width: 96px; height: 138px; bottom: 65px; animation: padcaramoving 10s 1s backwards;}
+  #story ul li .story-wrap .txt-box .gap{display: block; height: 30px;}
   /*story 끝*/
 }
 /*1024px ~ 1920px 끝*/
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -229,6 +283,11 @@ header nav{display: none}
     #story ul li > .txt-box{width: 1000px; height: 100px; border-radius: 50px; background-color: #ffe4d6; padding: 24px 0;}
 
     #story ul li > .txt-box p span{display: inline; font-size: 35px;}
+    #story ul li .story-wrap .txt-box p{font-size: 45px;}
+    #story ul li .story-wrap .txt-box p strong{font-size : 50px;}
+
+    #story ul li .story-wrap .object-box .book{width: 607px; height: 189px; bottom: -30px;animation: pcbookmoving 10s 0.5s backwards; opacity: 1;}
+    #story ul li .story-wrap .object-box .chara{width: 135px; height: 180px; bottom: 60px; animation: pccaramoving 10s 1s backwards; opacity: 1;}
     
   
     /*story 끝*/
