@@ -345,8 +345,8 @@ footer .parti ul li{font-size: 20px;}
   #story ul li .story-wrap .txt-box p{font-size: 45px;}
   #story ul li .story-wrap .txt-box p strong{font-size : 50px;}
 
-  #story ul li .story-wrap .object-box .book{width: 607px; height: 189px; bottom: -30px;animation: pcbookmoving 10s 0.5s backwards; opacity: 1;}
-  #story ul li .story-wrap .object-box .chara{width: 135px; height: 180px; bottom: 60px; animation: pccaramoving 10s 1s backwards; opacity: 1;}
+  #story ul li .story-wrap .object-box .book{width: 607px; height: 189px; bottom: -30px;animation: pcbookmoving 10s 0.5s backwards; opacity: 0;}
+  #story ul li .story-wrap .object-box .chara{width: 135px; height: 180px; bottom: 60px; animation: pccaramoving 10s 1s backwards; opacity: 0;}
     
   
   /*story 끝*/
