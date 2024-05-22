@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-.inner{margin: 0 auto; width: 340px; padding: 0 30px;}
+.inner{margin: 0 auto; width: calc(100% - 60px); padding: 0 30px;}
 
 /*header 시작*/
 header{width: 100%;-webkit-box-shadow: 0 5px 8px 0 rgba(0,0,0,0.25); box-shadow: 0 5px 8px 0 rgba(0,0,0,0.25); z-index: 99; background-color: #fff;}
@@ -118,8 +118,34 @@ header nav{display: none}
 #story ul li:nth-child(3) .story-wrap .object-box .chara{background-image: url(../img/Character-The_Red_Shoes.png);}
 #story ul li:nth-child(4) .story-wrap .object-box .chara{background-image: url(../img/Character-The_Snow_Queen.png);}
 
-
 /*story 끝*/
+
+
+
+/*about 시작*/
+/*about 끝*/
+
+
+
+
+/*footer 시작*/
+footer{position: relative; background-color: #63bca0; margin-top: 500px;}
+footer .inner{padding: 10px 0; text-align: left;}
+footer .footter-bg{width: 100%; height: 100%; background: url(../img/footer-bg.png) no-repeat bottom left / contain; position: absolute; left: 0; bottom: 100%; z-index: -1;}
+footer nav{margin-bottom: 25px;}
+footer nav ul li{margin-bottom: 12px;}
+footer nav ul li:last-child{margin-bottom: 0px;}
+footer nav ul li a{font-size: 25px; color: #fff; font-family: "Marcellus", serif; transition: all 0.3s; font-weight: 300;}
+footer nav ul li:hover a{opacity: 0.7;}
+footer .go-btn{width: 240px; height: 36px; margin-bottom: 50px;}
+footer .go-btn a{width: 100%; height: 100%; display: block; background: url(../img/footer-btn.png) no-repeat center / contain; font-size: 0; color: transparent;}
+footer .go-btn:hover a{width: 100%; height: 100%; background: url(../img/footer-btn_on.png) no-repeat center / contain;}
+footer .f-logo{width: 270px; height: 40px; background: url(../img/f-logo.png) no-repeat center / contain; font-size: 0; color: transparent; margin-bottom: 20px;}
+footer .parti{color: #fff; margin-bottom: 70px;}
+footer .parti h3{display: inline-block; font-size: 22; font-family: "Marcellus", serif; font-weight: 300; letter-spacing: 2px; border-right: 1px solid #fff; padding-right: 5px; margin-bottom: 5px;}
+footer .parti ul{display: flex;}
+footer .parti ul li{font-size: 18px; margin-right: 5px; font-weight: 300;}
+/*footer 끝*/
 
 
 
@@ -223,7 +249,39 @@ header nav{display: none}
   #story ul li .story-wrap .object-box .book{width: 421px; height: 130px; animation: padbookmoving 10s 0.5s backwards;}
   #story ul li .story-wrap .object-box .chara{width: 96px; height: 138px; bottom: 65px; animation: padcaramoving 10s 1s backwards;}
   #story ul li .story-wrap .txt-box .gap{display: block; height: 30px;}
-  /*story 끝*/
+/*story 끝*/
+
+
+
+/*about 시작*/
+/*about 끝*/
+
+
+
+
+/*footer 시작*/
+footer{height: 170px;}
+footer .footter-bg{width: 100%; height: 100vh;}
+footer nav{margin-bottom: 0; position: absolute; top: -100px; left: 30px;}
+footer nav ul{display: flex;}
+footer nav ul li{margin-bottom: 0px; margin-right: 40px;}
+footer nav ul li:last-child{margin-right: 0;}
+footer nav ul li a{font-size: 32px;}
+
+footer .go-btn{width: 280px; height: 43px; margin-bottom: 0px; position: absolute; top: -15px; left: 530px;}
+footer .f-logo{width: 430px; height: 60px; margin-bottom: 0px; position: absolute; top: -20px; left: 30px;}
+footer .parti{margin-bottom: 0px; position: absolute; top: 60px; left: 30px;}
+footer .parti{display: flex;}
+footer .parti h3{font-size: 24px; margin-bottom: 0px; margin-right: 5px;}
+footer .parti ul li{font-size: 20px;}
+/*footer 끝*/
+
+
+
+
+
+
+
 }
 /*1024px ~ 1920px 끝*/
 
@@ -276,22 +334,35 @@ header nav{display: none}
    width: 300px;
     height: 70px;
   }
-  /*famous 카드효과 시작*/
 
 
-    /*story 시작*/
 
-    #story ul li > .txt-box{width: 1000px; height: 100px; border-radius: 50px; background-color: #ffe4d6; padding: 24px 0;}
+  /*story 시작*/
 
-    #story ul li > .txt-box p span{display: inline; font-size: 35px;}
-    #story ul li .story-wrap .txt-box p{font-size: 45px;}
-    #story ul li .story-wrap .txt-box p strong{font-size : 50px;}
+  #story ul li > .txt-box{width: 1000px; height: 100px; border-radius: 50px; background-color: #ffe4d6; padding: 24px 0;}
 
-    #story ul li .story-wrap .object-box .book{width: 607px; height: 189px; bottom: -30px;animation: pcbookmoving 10s 0.5s backwards; opacity: 1;}
-    #story ul li .story-wrap .object-box .chara{width: 135px; height: 180px; bottom: 60px; animation: pccaramoving 10s 1s backwards; opacity: 1;}
+  #story ul li > .txt-box p span{display: inline; font-size: 35px;}
+  #story ul li .story-wrap .txt-box p{font-size: 45px;}
+  #story ul li .story-wrap .txt-box p strong{font-size : 50px;}
+
+  #story ul li .story-wrap .object-box .book{width: 607px; height: 189px; bottom: -30px;animation: pcbookmoving 10s 0.5s backwards; opacity: 1;}
+  #story ul li .story-wrap .object-box .chara{width: 135px; height: 180px; bottom: 60px; animation: pccaramoving 10s 1s backwards; opacity: 1;}
     
   
-    /*story 끝*/
+  /*story 끝*/
+
+
+
+  /*about 시작*/
+  /*about 끝*/
+
+
+
+
+  /*footer 시작*/
+  footer{height: 150px; background-color: transparent ;}
+  footer .footter-bg{width: 100%; height: 100vh; bottom: 0;}
+  /*footer 끝*/
 
 }
 /*1024px ~ 1920px 끝*/
