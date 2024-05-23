@@ -20,6 +20,7 @@
   <script src="js/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/wallop/2.4.1/js/Wallop.min.js'></script>
+  <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
   <script src="js/main.js"></script>
   <!--JS 끝-->
 
@@ -31,9 +32,9 @@
         <h1><a href="#"><img src="img/h-logo.jpg" alt="안데르센 동화 전시회"></a></h1> 
         <nav>
           <ul>
-            <li><a href="#">ANDERSEN</a></li>
-            <li><a href="#">STORY</a></li>
-            <li><a href="#">FALERSEN</a></li>
+            <li><a href="#profile">ANDERSEN</a></li>
+            <li><a href="#story">STORY</a></li>
+            <li><a href="#about">FALERSEN</a></li>
             <li><a href="#">ENJOY</a></li>
           </ul>
         </nav>
@@ -106,8 +107,86 @@
                     <span>S</span><span>n</span><span>e</span><span>d</span><span>r</span><span>o</span><span>n</span><span>n</span><span>i</span><span>n</span><span>g</span><span>e</span><span>n</span>
                   </p>
                 </li>
+                <li class="swiper-slide">
+                  <h4>미운 오리 새끼</h4>
+                  <p>
+                    <span>D</span><span>e</span><span>n</span>
+                    <span>g</span><span>r</span><span>i</span><span>m</span><span>m</span><span>e</span>
+                    <span>æ</span><span>l</span><span>l</span><span>i</span><span>n</span><span>g</span>
+                  </p>
+                </li>
+                <li class="swiper-slide">
+                  <h4>백조 왕자</h4>
+                  <p>
+                    <span>D</span><span>e</span>
+                    <span>v</span><span>i</span><span>l</span><span>d</span><span>e</span>
+                    <span>S</span><span>v</span><span>a</span><span>n</span><span>e</span><span>r</span>
+                  </p>
+                </li>
+                <li class="swiper-slide">
+                  <h4>벌거벗은 임금님</h4>
+                  <p>
+                    <span>K</span><span>e</span><span>j</span><span>s</span><span>e</span><span>r</span><span>e</span><span>n</span><span>s</span>
+                    <span>n</span><span>y</span><span>e</span>
+                    <span>K</span><span>l</span><span>æ</span><span>d</span><span>e</span><span>r</span>
+                  </p>
+                </li>
+                <li class="swiper-slide">
+                  <h4>엄지공주</h4>
+                  <p>
+                    <span>T</span><span>o</span><span>m</span><span>m</span><span>e</span><span>l</span><span>i</span><span>s</span><span>e</span>
+                  </p>
+                </li>
+                <li class="swiper-slide">
+                  <h4>공주와 완두콩</h4>
+                  <p>
+                    <span>P</span><span>r</span><span>i</span><span>n</span><span>d</span><span>s</span><span>e</span><span>s</span><span>s</span><span>e</span><span>n</span>
+                    <span>p</span><span>a</span><span>a</span>
+                    <span>Æ</span><span>r</span><span>t</span><span>e</span><span>n</span>
+                  </p>
+                </li>
+                <li class="swiper-slide">
+                  <h4>외다리 병정</h4>
+                  <p>
+                    <span>D</span><span>e</span><span>n</span>
+                    <span>s</span><span>t</span><span>a</span><span>n</span><span>d</span><span>h</span><span>a</span><span>f</span><span>t</span><span>i</span><span>g</span><span>e</span>
+                    <span>t</span><span>i</span><span>n</span><span>s</span><span>o</span><span>l</span><span>d</span><span>a</span><span>t</span>
+                  </p>
+                </li>
+                <li class="swiper-slide">
+                  <h4>모래장수 올레</h4>
+                  <p>
+                    <span>O</span><span>l</span><span>e</span>
+                    <span>L</span><span>u</span><span>k</span><span>ø</span><span>j</span><span>e</span>
+                  </p>
+                </li>
+                <li class="swiper-slide">
+                  <h4>프시케</h4>
+                  <p>
+                    <span>P</span><span>s</span><span>y</span><span>k</span><span>e</span>
+                  </p>
+                </li>
+                <li class="swiper-slide">
+                  <h4>돼지치기 왕자</h4>
+                  <p>
+                    <span>S</span><span>v</span><span>i</span><span>n</span><span>e</span><span>d</span><span>r</span><span>e</span><span>n</span><span>g</span><span>e</span><span>n</span>
+                  </p>
+                </li>
+                <li class="swiper-slide">
+                  <h4>부시통</h4>
+                  <p>
+                    <span>T</span><span>i</span><span>n</span><span>d</span><span>e</span><span>r</span>
+                    <span>b</span><span>o</span><span>k</span><span>s</span>
+                  </p>
+                </li>
+                <li class="swiper-slide">
+                  <h4>길동무</h4>
+                  <p>
+                    <span>R</span><span>e</span><span>j</span><span>s</span><span>e</span><span>k</span><span>a</span><span>m</span><span>m</span><span>e</span><span>r</span><span>a</span><span>t</span><span>e</span><span>n</span>
+                  </p>
+                </li>
               </ul> 
-           </div>
+          </div><!--.swiper .fairytale-slide-->
 
           <div class="signature"></div>
         </div><!--.inner-->
@@ -512,6 +591,12 @@
         </div><!--.inner-->
       </footer>
     </section><!--#contents-->
+    <div class="top-btn link anim-explode-container">
+      <a href="#visual">
+        <p>TOP</p>
+      </a>
+      <svg class="anim-explode" role="presentational" viewBox="0 0 500 500"></svg>
+    </div>
   </div><!--.wrap-->
 </body>
 </html>

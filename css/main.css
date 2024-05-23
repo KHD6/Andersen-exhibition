@@ -12,7 +12,7 @@ header nav{display: none}
 
 /*visual 시작*/
 #visual{height: calc(100vh - 100px);}
-#visual .visual-bg{width: 100%; height: 100%; background: url(../img/visual.jpg) no-repeat center / cover; position: relative;}
+#visual .visual-bg{width: 100%; height: 100vh; background: url(../img/visual.jpg) no-repeat center / cover; position: relative;}
 #visual .visual-bg .scroll{position: absolute; bottom: 60px; left: 50%; color: #fff; font-size: 25px; padding-bottom: 170px; background: url(../img/scroll-arrow.png) no-repeat bottom / 35px auto; text-shadow: 0 0 8px #000; animation: scroll 2s infinite alternate;}
 /*visual 끝*/
 
@@ -30,7 +30,7 @@ header nav{display: none}
 #profile .txt-box p{font-size: 20px; margin-bottom: 15px;}
 #profile .year{font-family: "Marcellus", serif; font-size: 20px; text-align: center; margin-bottom: 30px;}
 
-#profile .fairytale-slide{width: 200px; height: 126px;}
+#profile .fairytale-slide{width: 250px; height: 126px;}
 #profile .fairytale-slide ul li{background-color: #fff; text-align: center;}
 #profile .fairytale-slide ul li h4{font-size: 30px; font-weight: bold; margin-bottom: 15px;}
 #profile .fairytale-slide ul li p span{font-size: 16px; opacity: 0; display: inline-block;}
@@ -65,7 +65,7 @@ header nav{display: none}
 #story ul li > .txt-box p{text-align: center; line-height: 1.5;}
 #story ul li > .txt-box p span{display: block; font-size: 22px;}
 
-#story ul li .book-box{width: 250px; height: 280px; position: relative; margin: 0 auto;}
+#story ul li .book-box{width: 250px; height: 280px; position: relative; margin: 0 auto; cursor: pointer;}
 #story ul li .book-box::before{content: ""; display: block; width: 200px; height: 260px; border-radius: 100px 100px 0 0; position: absolute; top: 0; left: 50%; transform: translateX(-50%);}
 #story ul li .book-box::after{content: ""; display: block; width: 250px; height: 80px; position: absolute; bottom: 0; left: 50%; transform: translate(-50%) scale(1); transition: all 0.5s;}
 #story ul li .book-box:hover::after{transform: translate(-50%, -20px); animation: bookmoving 3s infinite;}
@@ -80,7 +80,7 @@ header nav{display: none}
 #story ul li .book-box span{color: #fff; font-size: 20px; font-weight: bold; position: absolute; bottom: 50px; left: 50%; transform: translate(-50%, 0); animation: bookmoving 4s infinite; transition: all 0.6s;}
 #story ul li .book-box:hover span{opacity: 0;}
 
-#story ul li .story-wrap{width: 100%; height: 100%; position: fixed; top: 0; left: 0; background-color: #fff; z-index: 99; display: none;}
+#story ul li .story-wrap{width: 100%; height: 100%; position: fixed; top: 0; left: 0; background-color: transparent; z-index: 99; display: none;}
 #story ul li .story-wrap .story-pc{display: none;}
 #story ul li .story-wrap.on{display: block;}
 #story ul li .story-wrap .color-bg{position: absolute; top: -20%; left: -20%; width: 140%; height: 140%; animation: colorbg 1s; transform: scale(1); z-index: -2; transform-origin: bottom center;}
@@ -159,6 +159,8 @@ footer .parti ul{display: flex;}
 footer .parti ul li{font-size: 18px; margin-right: 5px; font-weight: 300;}
 /*footer 끝*/
 
+.top-btn{display: none;}
+
 
 
 
@@ -194,7 +196,7 @@ footer .parti ul li{font-size: 18px; margin-right: 5px; font-weight: 300;}
 
 
   /*profile 시작*/
-
+  #profile{padding-top: 100px;}
   #profile h2{font-size: 200px;text-align: left; font-weight: 200;}
   
   
@@ -206,7 +208,7 @@ footer .parti ul li{font-size: 18px; margin-right: 5px; font-weight: 300;}
   
   #profile .year{font-size: 32px; margin-bottom: 35px;}
   
-  #profile .fairytale-slide{width: 225px; height: 140px;}
+  #profile .fairytale-slide{width: 300px; height: 140px;}
   #profile .fairytale-slide ul li h4{font-size: 35px;}
   #profile .fairytale-slide ul li p span{font-size: 18px;}
   #profile .signature{width: 453px; height: 145px; text-align: right; margin: 0 0 0 auto;}
@@ -238,7 +240,7 @@ footer .parti ul li{font-size: 18px; margin-right: 5px; font-weight: 300;}
 
 
   /*story 시작*/
-
+  #story{padding-top: 120px;}
   #story ul li > .txt-box{width: 500px; height: 135px; border-radius: 70px; background-color: #ffe4d6; padding: 24px 0;}
 
   #story ul li > .txt-box p span{font-size: 28px;}
@@ -266,6 +268,7 @@ footer .parti ul li{font-size: 18px; margin-right: 5px; font-weight: 300;}
 
 
   /*about 시작*/
+  #about{padding-top: 120px;}
   #about .top-box{width: 944px; display: flex; justify-content: space-between; margin: 0 auto 25px;}
   #about .top-box .mascot{width: 225px; height: 300px; margin: 0;}
 
@@ -381,6 +384,12 @@ footer .parti ul li{font-size: 18px; margin-right: 5px; font-weight: 300;}
   footer{height: 150px; background-color: transparent ;}
   footer .footter-bg{width: 100%; height: 100vh; bottom: 0;}
   /*footer 끝*/
+
+  .top-btn{display: block; position: fixed; bottom: 5%; right: 5%; width: 50px; height: 50px;}
+  .top-btn:hover::after{content: "";display: block; width: 40px; height: 50px; background: url(../img/btn-mascot.png) no-repeat center / cover; position: absolute; top: -50px; left: 50%; transform: translate(-50%, 0); animation: mascot 1.5s; z-index: -1;}
+  .top-btn a{display: block; width: 100%; height: 100%; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.8) 2px 2px 2px 0px; background: #aed8cb;}
+  .top-btn a p{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff; font-weight: bold;}
+  .link svg {position: absolute; width: 200%; height: 200%; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: -2;}
 
 }
 /*1024px ~ 1920px 끝*/
