@@ -57,6 +57,7 @@ header nav{display: none}
 /*famous 끝*/
 
 /*story 시작*/
+#story{margin-bottom: 200px;}
 #story .inner{padding: 0;}
 
 #story ul li{margin-bottom: 100px;}
@@ -76,7 +77,8 @@ header nav{display: none}
 #story ul li:nth-child(2) .book-box::after{background: url(../img/book02.png) no-repeat center / cover;}
 #story ul li:nth-child(3) .book-box::after{background: url(../img/book03.png) no-repeat center / cover;}
 #story ul li:nth-child(4) .book-box::after{background: url(../img/book04.png) no-repeat center / cover;}
-
+#story ul li .book-box span{color: #fff; font-size: 20px; font-weight: bold; position: absolute; bottom: 50px; left: 50%; transform: translate(-50%, 0); animation: bookmoving 4s infinite; transition: all 0.6s;}
+#story ul li .book-box:hover span{opacity: 0;}
 
 #story ul li .story-wrap{width: 100%; height: 100%; position: fixed; top: 0; left: 0; background-color: #fff; z-index: 99; display: none;}
 #story ul li .story-wrap .story-pc{display: none;}
@@ -123,6 +125,16 @@ header nav{display: none}
 
 
 /*about 시작*/
+#about .top-box{margin-bottom: 20px;}
+#about .top-box .mascot{width: 200px; height: 260px; margin: 0 auto 30px;}
+#about .top-box .mascot img{width: 100%; height: 100%; object-fit: cover;}
+#about .top-box .txt-box{width: 420px; margin-bottom: 20px; margin: 0 auto;}
+#about .top-box .txt-box p{font-size: 20px; margin-bottom: 20px; font-weight: 500;}
+#about .top-box .txt-box p:last-child{margin-bottom: 0;}
+#about .top-box .txt-box p span{display: block;}
+#about .bot-box .img-box{width: 420px; margin: 0 auto;}
+#about .bot-box .img-box img{width: 100%;}
+
 /*about 끝*/
 
 
@@ -165,7 +177,7 @@ footer .parti ul li{font-size: 18px; margin-right: 5px; font-weight: 300;}
 
 /*1024px ~ 1920px 시작*/
 @media screen and (min-width : 1024px) {
-  .inner{margin: 0 auto; min-width: 1024px; width: calc(100% - 80px); padding: 0;}
+  .inner{margin: 0 auto; min-width: 944px; width: calc(100% - 80px); padding: 0;}
 
 
   /*header 시작*/
@@ -249,38 +261,39 @@ footer .parti ul li{font-size: 18px; margin-right: 5px; font-weight: 300;}
   #story ul li .story-wrap .object-box .book{width: 421px; height: 130px; animation: padbookmoving 10s 0.5s backwards;}
   #story ul li .story-wrap .object-box .chara{width: 96px; height: 138px; bottom: 65px; animation: padcaramoving 10s 1s backwards;}
   #story ul li .story-wrap .txt-box .gap{display: block; height: 30px;}
-/*story 끝*/
+  /*story 끝*/
 
 
 
-/*about 시작*/
-/*about 끝*/
+  /*about 시작*/
+  #about .top-box{width: 944px; display: flex; justify-content: space-between; margin: 0 auto 25px;}
+  #about .top-box .mascot{width: 225px; height: 300px; margin: 0;}
 
-
-
-
-/*footer 시작*/
-footer{height: 170px;}
-footer .footter-bg{width: 100%; height: 100vh;}
-footer nav{margin-bottom: 0; position: absolute; top: -100px; left: 30px;}
-footer nav ul{display: flex;}
-footer nav ul li{margin-bottom: 0px; margin-right: 40px;}
-footer nav ul li:last-child{margin-right: 0;}
-footer nav ul li a{font-size: 32px;}
-
-footer .go-btn{width: 280px; height: 43px; margin-bottom: 0px; position: absolute; top: -15px; left: 530px;}
-footer .f-logo{width: 430px; height: 60px; margin-bottom: 0px; position: absolute; top: -20px; left: 30px;}
-footer .parti{margin-bottom: 0px; position: absolute; top: 60px; left: 30px;}
-footer .parti{display: flex;}
-footer .parti h3{font-size: 24px; margin-bottom: 0px; margin-right: 5px;}
-footer .parti ul li{font-size: 20px;}
-/*footer 끝*/
+  #about .top-box .txt-box{width: 619px; margin: 0; padding: 25px 0;}
+  #about .top-box .txt-box p{font-size: 25px; margin-bottom: 25px;}
+  #about .top-box .txt-box p span br{display: none;}
+  #about .bot-box .img-box{width: 944px;}
+  /*about 끝*/
 
 
 
 
+  /*footer 시작*/
+  footer{height: 170px;}
+  footer .footter-bg{width: 100%; height: 100vh;}
+  footer nav{margin-bottom: 0; position: absolute; top: -100px; left: 30px;}
+  footer nav ul{display: flex;}
+  footer nav ul li{margin-bottom: 0px; margin-right: 40px;}
+  footer nav ul li:last-child{margin-right: 0;}
+  footer nav ul li a{font-size: 32px;}
 
-
+  footer .go-btn{width: 280px; height: 43px; margin-bottom: 0px; position: absolute;   top: -15px; left: 530px;}
+  footer .f-logo{width: 430px; height: 60px; margin-bottom: 0px; position: absolute;   top: -20px; left: 30px;}
+  footer .parti{margin-bottom: 0px; position: absolute; top: 60px; left: 30px;}
+  footer .parti{display: flex;}
+  footer .parti h3{font-size: 24px; margin-bottom: 0px; margin-right: 5px;}
+  footer .parti ul li{font-size: 20px;}
+  /*footer 끝*/
 
 }
 /*1024px ~ 1920px 끝*/
@@ -354,6 +367,11 @@ footer .parti ul li{font-size: 20px;}
 
 
   /*about 시작*/
+  #about .top-box{width: 1126px; display: flex; justify-content: left;}
+  #about .top-box .mascot{width: 250px; height: 340px; margin-right: 100px;}
+  #about .top-box .txt-box{width: 710px; margin: 0;padding: 30px 0;}
+  #about .top-box .txt-box p{font-size: 30px; margin-bottom: 30px;}
+  #about .bot-box .img-box{width: 1126px;}
   /*about 끝*/
 
 

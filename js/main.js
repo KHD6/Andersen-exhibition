@@ -94,6 +94,8 @@ $(document).ready(function(){
       $(".story-wrap").removeClass("on")
     });
     /*story-wrap.on 끝*/
+    
+
 
 
 
