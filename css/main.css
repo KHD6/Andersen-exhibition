@@ -62,7 +62,11 @@ header nav{display: none}
 #story .inner{padding: 0;}
 
 #story ul li{margin-bottom: 100px;}
-#story ul li > .txt-box{width: 370px; height: 100px; border-radius: 50px; background-color: #ffe4d6; padding: 18px 0; margin: 0 auto 70px;}
+#story ul li > .txt-box{width: 370px; height: 100px; border-radius: 50px; padding: 18px 0; margin: 0 auto 70px;}
+#story ul li:nth-child(1) > .txt-box{background-color: #ffe4d6;}
+#story ul li:nth-child(2) > .txt-box{background-color: #c8dbff;}
+#story ul li:nth-child(3) > .txt-box{background-color: #ffd9e3;}
+#story ul li:nth-child(4) > .txt-box{background-color: #cff9ff;}
 #story ul li > .txt-box p{text-align: center; line-height: 1.5;}
 #story ul li > .txt-box p span{display: block; font-size: 22px;}
 
@@ -155,7 +159,7 @@ footer .go-btn a{width: 100%; height: 100%; display: block; background: url(../i
 footer .go-btn:hover a{width: 100%; height: 100%; background: url(../img/footer-btn_on.png) no-repeat center / contain;}
 footer .f-logo{width: 270px; height: 40px; background: url(../img/f-logo.png) no-repeat center / contain; font-size: 0; color: transparent; margin-bottom: 20px;}
 footer .parti{color: #fff; margin-bottom: 70px;}
-footer .parti h3{display: inline-block; font-size: 22; font-family: "Marcellus", serif; font-weight: 300; letter-spacing: 2px; border-right: 1px solid #fff; padding-right: 5px; margin-bottom: 5px;}
+footer .parti h3{display: inline-block; font-size: 22; font-family: "Marcellus", serif; font-weight: 300; letter-spacing: 2px; border-right: 1px solid #fff; padding-right: 15px; margin-bottom: 5px;}
 footer .parti ul{display: flex;}
 footer .parti ul li{font-size: 18px; margin-right: 5px; font-weight: 300;}
 /*footer 끝*/
@@ -190,9 +194,8 @@ footer .parti ul li{font-size: 18px; margin-right: 5px; font-weight: 300;}
   header nav ul{display: flex; padding-top: 10px;}
   header nav ul li{margin-right: 50px;}
   header nav ul li:last-child{margin-right: 0;}
-  header nav ul li a{font-family: "Marcellus", serif; font-size: 30px;}
-  header nav ul li::after{content: ""; display: block; width: 0%; height: 3px; background-color: #000; transition: all 0.5s;}
-  header nav ul li:hover::after{width: 100%;}
+  header nav ul li a{font-family: "Marcellus", serif; font-size: 30px; transition: all 0.5s;}
+  header nav ul li:hover a{color: #63bca0;}
   /*header 끝*/ 
 
 
@@ -294,9 +297,17 @@ footer .parti ul li{font-size: 18px; margin-right: 5px; font-weight: 300;}
   footer .f-logo{width: 430px; height: 60px; margin-bottom: 0px; position: absolute;   top: -20px; left: 30px;}
   footer .parti{margin-bottom: 0px; position: absolute; top: 60px; left: 30px;}
   footer .parti{display: flex;}
-  footer .parti h3{font-size: 24px; margin-bottom: 0px; margin-right: 5px;}
+  footer .parti h3{font-size: 24px; margin-bottom: 0px; margin-right: 20px; padding-right: 20px;}
   footer .parti ul li{font-size: 20px;}
   /*footer 끝*/
+
+
+
+  .top-btn{display: block; position: fixed; bottom: 5%; right: 5%; width: 60px; height: 60px; z-index: 999;}
+  .top-btn:hover::after{content: "";display: block; width: 40px; height: 50px; background: url(../img/btn-mascot.png) no-repeat center / cover; position: absolute; top: -50px; left: 50%; transform: translate(-50%, 0); animation: mascot 1.5s; z-index: -1;}
+  .top-btn a{display: block; width: 100%; height: 100%; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.8) 2px 2px 2px 0px; background: #144486;}
+  .top-btn a p{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff; font-weight: bold;}
+  .link svg {position: absolute; width: 200%; height: 200%; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: -2;}
 
 }
 /*1024px ~ 1920px 끝*/
@@ -385,11 +396,7 @@ footer .parti ul li{font-size: 18px; margin-right: 5px; font-weight: 300;}
   footer .footter-bg{width: 100%; height: 100vh; bottom: 0;}
   /*footer 끝*/
 
-  .top-btn{display: block; position: fixed; bottom: 5%; right: 5%; width: 50px; height: 50px; z-index: 999;}
-  .top-btn:hover::after{content: "";display: block; width: 40px; height: 50px; background: url(../img/btn-mascot.png) no-repeat center / cover; position: absolute; top: -50px; left: 50%; transform: translate(-50%, 0); animation: mascot 1.5s; z-index: -1;}
-  .top-btn a{display: block; width: 100%; height: 100%; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.8) 2px 2px 2px 0px; background: #aed8cb;}
-  .top-btn a p{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff; font-weight: bold;}
-  .link svg {position: absolute; width: 200%; height: 200%; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: -2;}
+
 
 }
 /*1024px ~ 1920px 끝*/
