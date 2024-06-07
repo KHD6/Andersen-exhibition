@@ -130,15 +130,24 @@ header nav{display: none}
 
 
 /*about 시작*/
-#about .top-box{margin-bottom: 20px;}
-#about .top-box .mascot{width: 200px; height: 260px; margin: 0 auto 30px;}
-#about .top-box .mascot img{width: 100%; height: 100%; object-fit: cover;}
-#about .top-box .txt-box{width: 420px; margin-bottom: 20px; margin: 0 auto;}
-#about .top-box .txt-box p{font-size: 20px; margin-bottom: 20px; font-weight: 500;}
-#about .top-box .txt-box p:last-child{margin-bottom: 0;}
-#about .top-box .txt-box p span{display: block;}
-#about .bot-box .img-box{width: 420px; margin: 0 auto;}
-#about .bot-box .img-box img{width: 100%;}
+#about .inner{padding: 0;}
+#about .box01 p{font-size: 18px; text-align: center; line-height: 1.75; margin-bottom: 25px;}
+#about .box01 p strong{font-size: 20px;}
+#about .box01 p span{display: block;}
+#about .box01 .img-box{margin: 0 auto 50px; max-width: 550px;}
+#about .box01 .img-box img{width: 100%; height: 100%; object-fit: contain;}
+
+#about .box02{position: relative; padding-bottom: 100px; margin: 0 auto;}
+#about .box02 .img-box{position: relative; margin-bottom: 50px; max-width: 350px; margin: 0 auto;}
+#about .box02 .img-box .mascot{width: 20%; position: absolute; bottom: 5%; right: 10%; animation: mascot 5s linear infinite;}
+
+
+#about .box02 .button{position: absolute; width: 100%; ;height: 100px; bottom: 0;}
+#about .box02 .button .button_inner {position: absolute; width: 260px; height: 45px; left: 50%; transform: translate(-50%, -50%); top: 50%; box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.04); cursor: pointer; border-radius: 22.5px; color: #fff; background-color: #144486; text-align: Center;}
+#about .box02 .button .button_inner span{font-size: 14px; font-weight: bold; line-height: 40px;}
+#about .box02 .button .button_inner .b_l_quad{position: absolute; top: 0; left: 50%; width: 300px; transform: translateX(-35%);}
+#about .box02 .button .button_inner:hover {box-shadow: 0px 17px 18px -14px rgba(0, 0, 0, 0.08);}
+
 
 /*about 끝*/
 
@@ -272,14 +281,21 @@ footer .parti ul li{font-size: 18px; margin-right: 5px; font-weight: 300;}
 
 
   /*about 시작*/
-  #about{padding-top: 120px;}
-  #about .top-box{width: 944px; display: flex; justify-content: space-between; margin: 0 auto 25px;}
-  #about .top-box .mascot{width: 225px; height: 300px; margin: 0;}
+  /*about 시작*/
+  #about .inner{padding-top: 150px;}
+  #about .box01{margin-bottom: 100px;}
+  #about .box01 p{font-size: 22px; margin-bottom: 25px;}
+  #about .box01 p strong{font-size: 36px; display: block;}
+  #about .box01 p span{display: inline;}
+  #about .box01 p:nth-child(2) span{display: block;}
+  #about .box01 .img-box{margin: 0 auto 50px; max-width: 650px;}
 
-  #about .top-box .txt-box{width: 619px; margin: 0; padding: 25px 0;}
-  #about .top-box .txt-box p{font-size: 25px; margin-bottom: 25px;}
-  #about .top-box .txt-box p span br{display: none;}
-  #about .bot-box .img-box{width: 944px;}
+  #about .box02 .img-box{max-width: 550px; margin: 0 auto;}
+
+
+  #about .box02 .button .button_inner {width: 260px; height: 45px;}
+  #about .box02 .button .button_inner span{font-size: 18px;}
+
   /*about 끝*/
 
 
@@ -305,7 +321,7 @@ footer .parti ul li{font-size: 18px; margin-right: 5px; font-weight: 300;}
 
 
   .top-btn{display: block; position: fixed; bottom: 5%; right: 5%; width: 60px; height: 60px; z-index: 999;}
-  .top-btn:hover::after{content: "";display: block; width: 40px; height: 50px; background: url(../img/btn-mascot.png) no-repeat center / cover; position: absolute; top: -50px; left: 50%; transform: translate(-50%, 0); animation: mascot 1.5s; z-index: -1;}
+  .top-btn:hover::after{content: "";display: block; width: 40px; height: 50px; background: url(../img/btn-mascot.png) no-repeat center / cover; position: absolute; top: -50px; left: 50%; transform: translate(-50%, 0); animation: btnmascot 1.5s; z-index: -1;}
   .top-btn a{display: block; width: 100%; height: 100%; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.8) 2px 2px 2px 0px; background: #144486;}
   .top-btn a p{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff; font-weight: bold;}
   .link svg {position: absolute; width: 200%; height: 200%; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: -2;}
@@ -329,7 +345,7 @@ footer .parti ul li{font-size: 18px; margin-right: 5px; font-weight: 300;}
 
 
 
-/*1024px ~ 1920px 시작*/
+/*1920px ~ 시작*/
 @media screen and (min-width : 1920px) {
 
   /*profile 시작*/
@@ -366,7 +382,6 @@ footer .parti ul li{font-size: 18px; margin-right: 5px; font-weight: 300;}
 
 
   /*story 시작*/
-
   #story ul li{margin-bottom: 300px;}
   #story ul li > .txt-box{width: 1000px; height: 100px; border-radius: 50px; background-color: #ffe4d6; padding: 24px 0;}
 
@@ -376,29 +391,28 @@ footer .parti ul li{font-size: 18px; margin-right: 5px; font-weight: 300;}
 
   #story ul li .story-wrap .object-box .book{width: 607px; height: 189px; bottom: -30px;animation: pcbookmoving 10s 0.5s backwards; opacity: 0;}
   #story ul li .story-wrap .object-box .chara{width: 135px; height: 180px; bottom: 60px; animation: pccaramoving 10s 1s backwards; opacity: 0;}
-    
-  
   /*story 끝*/
 
 
 
   /*about 시작*/
-  #about .top-box{width: 1126px; display: flex; justify-content: left;}
-  #about .top-box .mascot{width: 250px; height: 340px; margin-right: 100px;}
-  #about .top-box .txt-box{width: 710px; margin: 0;padding: 30px 0;}
-  #about .top-box .txt-box p{font-size: 30px; margin-bottom: 30px;}
-  #about .bot-box .img-box{width: 1126px;}
+  #about .box01 .img-box{max-width: 950px;}
+  #about .box01 p:nth-child(2) span{display: inline;}
+
+  #about .box02 .img-box{max-width: 750px; margin-bottom: 60px;}  
+  #about .box02 .button .button_inner {width: 280px; height: 45px;}
+  #about .box02 .button .button_inner span{font-size: 20px;}
   /*about 끝*/
 
 
 
 
   /*footer 시작*/
-  footer{height: 150px; background-color: transparent ;}
+  footer{height: 150px; background-color: transparent;}
   footer .footter-bg{width: 100%; height: 100vh; bottom: 0;}
   /*footer 끝*/
 
 
 
 }
-/*1024px ~ 1920px 끝*/
+/*1920px ~ 끝*/
