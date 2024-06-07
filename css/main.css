@@ -59,10 +59,9 @@ header nav{display: none}
 
 /*story 시작*/
 #story{margin-bottom: 200px;}
-#story .inner{padding: 0;}
-
+#story .inner{padding: 0; margin: 0; width: 100%;}
 #story ul li{margin-bottom: 200px;}
-#story ul li > .txt-box{width: 370px; height: 100px; border-radius: 50px; padding: 18px 0; margin: 0 auto 70px;}
+#story ul li > .txt-box{width: 370px; height: 100px; border-radius: 50px; padding: 18px 0; margin: 0 auto 70px; max-width: 100%;}
 #story ul li:nth-child(1) > .txt-box{background-color: #ffe4d6;}
 #story ul li:nth-child(2) > .txt-box{background-color: #c8dbff;}
 #story ul li:nth-child(3) > .txt-box{background-color: #ffd9e3;}
